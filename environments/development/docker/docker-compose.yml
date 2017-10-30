@@ -3,6 +3,8 @@ version: '3'
 services:
   web:
     container_name: nginx-server
+    volumes:
+       - ./../src/:/var/www/html
     build: 
       context: .
       dockerfile: DockerFile    
