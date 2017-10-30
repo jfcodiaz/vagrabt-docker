@@ -1,0 +1,13 @@
+## Docker Composer for Development Environment
+version: '3'
+services:
+  web:
+    container_name: nginx-server
+    build: 
+      context: .
+      dockerfile: DockerFile    
+    tty: true
+    stdin_open: true
+    restart: always
+    ports:
+      - 80:80
